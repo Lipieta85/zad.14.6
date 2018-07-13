@@ -1,6 +1,6 @@
 //Metody will - wywoływane zanim coś się wydarzy;
 //Metody did - wywoływane po tym jak coś się wydarzyło;
-var Counter1 = React.createClass({
+var Counter = React.createClass({
     getDefaultProps(){
         console.log('getDefaultProps - ustawia warości domyślne propsów.')
         console.log('getInitialState - określa stan początkowy komponentu') 
@@ -47,5 +47,11 @@ var Counter1 = React.createClass({
 });
 
 
-var element = React.createElement(Counter1);
+var element = React.createElement(Counter);
 ReactDOM.render(element, document.getElementById('app1'));
+
+var element = React.createElement(Counter);
+ReactDOM.render(element, document.getElementById('app2'));
+
+var element = React.createElement(Counter);
+ReactDOM.render(element, document.getElementById('app3'));
