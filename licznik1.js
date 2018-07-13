@@ -34,9 +34,10 @@ var Counter = React.createClass({
         return React.createElement('div', {className: 'buttons'},
         React.createElement('button', {onClick: this.increment, className: 'btn btn-success'}, 'Add 1'),
         React.createElement('button', {onClick: this.decrement, className: 'btn btn-success'}, 'Minus 1'),
-        React.createElement('p', {}, 'Licznik ' + this.state.counter)
-        );
+        React.createElement('p', {}, 'Licznik ' + this.state.counter)    
+        );    
     },
+    
     
     componentDidMount(){
         console.log('componentDidMount -wywoływana po metodzie render, do wykonywania opracji np. jquery lub pobranie danych')
@@ -47,11 +48,9 @@ var Counter = React.createClass({
 });
 
 
-var element = React.createElement(Counter);
-ReactDOM.render(element, document.getElementById('app1'));
-
-var element = React.createElement(Counter);
-ReactDOM.render(element, document.getElementById('app2'));
-
-var element = React.createElement(Counter);
-ReactDOM.render(element, document.getElementById('app3'));
+var element = React.createElement('div', {className: 'element'},
+              React.createElement(Counter),
+              React.createElement(Counter),
+              React.createElement(Counter)
+);
+ReactDOM.render(element, document.getElementById('app'));
